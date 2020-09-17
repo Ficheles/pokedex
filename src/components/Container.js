@@ -10,15 +10,12 @@ const Container = () => {
     useEffect(() => {
         (async () => {
             const response = await api.get(`/pokemon?offset=${1}&limit=${10}`)
-            const {count, next, previous, results} = response.data
-
-            setState(state => ({ ...state, count, next, previous, results }));
+            setState(state => ({ ...state, ...response.data }));
         })();
         
         (async () => {
-            const response = await api.get(`/pokemon/1`)
-            const {name, abilities} = response.data
-            setPokemon(pokemon => ({ ...pokemon, name, abilities }));
+            const response = await api.get(`/pokemon/18`)
+            setPokemon(pokemon => ({ ...pokemon, ...response.data}));
         })();
 
     }, []);

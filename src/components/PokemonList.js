@@ -14,8 +14,9 @@ const PokemonList = (props) =>{
             <h3 className="topic-title">
                 <i className="nes-icon heart"></i>Temos que Pegar!
             </h3>
-            { populate(props)}        
-        </section>     
+            { populate(props)}
+        </section>  
+
     )
 }
 
