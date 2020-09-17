@@ -1,11 +1,9 @@
 import React from 'react'
 
-import {pokemon} from '../store/action'
 const PokemonItem = (props) => {
     
     const onClick = (e) => {
         e.preventDefault();
-        pokemon(e.target.getAttribute('data-url'))
     }
 
     return (
